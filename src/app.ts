@@ -1,17 +1,7 @@
 import fastify from "fastify"
-import { z } from "zod"
+import { register } from "./http/controllers/register"
+import { appRoutes } from "./http/routes"
 
 export const app = fastify()
 
-app.post('/users', async (request, reply) => {
-  const registerBodySchema = z.object({
-    name: z.string(),
-    email: z.string().email(),
-    password: z.string().min(6)
-  })
-
-  const { name, email, password } = registerBodySchema.parse(request.body);
-
-  await
-
-})
+app.register(appRoutes)
