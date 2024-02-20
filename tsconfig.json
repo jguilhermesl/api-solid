@@ -6,10 +6,10 @@
       "@/*": ["./src/*"]
     },
     "target": "es2017",
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "typeRoots": ["@types"]
+    "typeRoots": ["src/@types"]
   }
 }
